@@ -14,20 +14,23 @@
         margin-bottom: 10px;
         width: 100% ;
         color: gray;
-        height: 30px;
+        height: 40px;
         border-radius: 5px;
         border: 1px solid ;
+        padding: 5px;
 
     }
 
     button {
         margin-top: 10px;
-        width: 100% ;
-        background-color: #238662;
+        width: 100% ; 
         color: #f4f4f9;
-        height: 30px;
-
-        border-radius: 5px;
+        height: 40px;
+        border-radius: 10px;
         border: none ;
+        background-color: #238662;
+        &:hover{
+            opacity: 0.8;
+        }
     }
 }

@@ -18,10 +18,14 @@ export class LoginComponent {
   onLogin(): void {
     this.ApiService.login(this.email, this.password).subscribe(
       response => {
-        console.log('Login bem-sucedido', response);
+        if (response.length > 0) {
+          console.log('Login bem-sucedido:', response[0]);
+        } else {
+          this.errorMessage = 'Email ou senha incorretos!';
+        }
       },
       error => {
-        this.errorMessage = 'Email ou senha incorretos!';
+        this.errorMessage = 'Erro ao conectar ao servidor. Tente novamente mais tarde.';
       }
     );
   }
