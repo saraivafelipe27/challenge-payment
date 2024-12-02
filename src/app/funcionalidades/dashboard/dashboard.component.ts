@@ -8,7 +8,7 @@ import { ApiService } from '../../services/api.service';
 })
 export class DashboardComponent implements OnInit {
   tasks: any[] = [];
-  tasksFiltradas: any[] = [];  // Tarefa filtrada
+  tasksFiltradas: any[] = [];
   search: string = ''; 
   selectedTask: any = null;
   showActionBar: boolean = false;

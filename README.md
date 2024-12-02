@@ -83,3 +83,34 @@ Pesquisar Pagamento: Permite buscar pelo título do pagamento.
 Organiza pagamento: Permite a organização por data ASC/DESC.
 
 Paginação: Possibilita a navegação por páginas.
+
+
+## 6 Testes Automatizados
+
+Executar os Testes
+
+`npm test`
+
+ApiService:
+
+Criação do Serviço: Garante que o ApiService seja criado corretamente.
+
+Login:
+Verifica se a URL e os parâmetros de login estão corretos ao chamar o método login.
+Confirma que a requisição é do tipo GET com os parâmetros email e senha esperados.
+
+Carregar pagamento (loadTasks):
+Verifica se o método loadTasks retorna corretamente a lista de pagamentos simuladas.
+Garante que a requisição seja feita com o método GET e o retorno seja conforme esperado.
+
+Criar pagamento (createTask):
+Verifica se o método createTask envia a requisição POST corretamente com o corpo esperado (dados da nova pagamento).
+Confirma que o retorno é a pagamento criada.
+
+Atualizar pagamento (updateTask):
+Garante que o método updateTask envia uma requisição PUT com o corpo correto (dados da pagamento atualizada).
+Verifica se a pagamento retornada é a mesma que foi atualizada.
+
+Deletar pagamento (deleteTask):
+Verifica se o método deleteTask envia a requisição DELETE com o ID correto.
+Confirma que o retorno após a exclusão é null.
