@@ -27,7 +27,7 @@ export class LoginComponent {
         const user = response.find((item: any) => item.email === this.email && item.password === this.password);
         if (user) {
           this.router.navigate(['/dashboard']);
-          console.log('Login bem-sucedido:', response[0]);
+          console.log('Login bem-sucedido:');
         } else {
           this.errorMessage = 'Email ou senha incorretos!';
         }
