@@ -23,11 +23,9 @@ export class LoginComponent {
   onLogin(): void {
     this.ApiService.login(this.email, this.password).subscribe(
       response => {
-        console.log(response)
         const user = response.find((item: any) => item.email === this.email && item.password === this.password);
         if (user) {
           this.router.navigate(['/dashboard']);
-          console.log('Login bem-sucedido:');
         } else {
           this.errorMessage = 'Email ou senha incorretos!';
         }

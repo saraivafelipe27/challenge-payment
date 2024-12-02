@@ -1,27 +1,79 @@
 # ChallengeFrontPayment
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 16.1.0.
+# Documentação do Projeto: Sistema de Gerenciamento de pagamentos
 
-## Development server
+## 1. Introdução
+Este projeto é um sistema básico de gerenciamento de pagamentos desenvolvido com Angular TypeScript. Ele permite:
 
-Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The application will automatically reload if you change any of the source files.
+Login de usuários com verificação de credenciais.
+CRUD (Create, Read, Update, Delete) de pagamentos na interface de dashboard.
+Pesquisa e Paginação dos pagamentos.
+Integração com uma API mock (JSON Server) para simular as operações de backend.
 
-## Code scaffolding
 
-Run `ng generate component component-name` to generate a new component. You can also use `ng generate directive|pipe|service|class|guard|interface|enum|module`.
+## 2. Tecnologias Utilizadas
+Frontend: Angular 16, TypeScript, HTML5, SCSS.
+Mock API: JSON Server.
+Bibliotecas e Frameworks:
+Angular CLI.
+Jasmine e Karma (testes unitários).
+HttpClient (requisições HTTP).
+Gerenciador de Pacotes: npm.
 
-## Build
+## 3. Instalação
+Clone o repositório:
 
-Run `ng build` to build the project. The build artifacts will be stored in the `dist/` directory.
+No seu terminal
+cole o código  `git clone https://github.com/saraivafelipe27/challenge-payment` e execute
+cd challenge-payment
 
-## Running unit tests
+Instale as dependências do projeto:
 
-Run `ng test` to execute the unit tests via [Karma](https://karma-runner.github.io).
+No seu terminal
+cole o código
+`npm install` e execute
 
-## Running end-to-end tests
+Instale o JSON Server globalmente:
 
-Run `ng e2e` to execute the end-to-end tests via a platform of your choice. To use this command, you need to first add a package that implements end-to-end testing capabilities.
+No seu terminal
+cole o código
+`npm install -g json-server`
 
-## Further help
 
-To get more help on the Angular CLI use `ng help` or go check out the [Angular CLI Overview and Command Reference](https://angular.io/cli) page.
+## 4. Inicialização
+
+Execute o servidor de desenvolvimento Angular:
+`npm start`
+Acesse o sistema no navegador em:
+http://localhost:4200
+
+
+Execute o Json server em outra aba do seu terminal
+`json-server --watch db.json --port 3030`
+
+O servidor será iniciado em:
+http://localhost:3030
+
+
+## 5. Funcionalidades
+
+## 5.1 Login
+O usuário pode fazer login utilizando o seguinte usuário padrão:
+
+{
+  "email": "usuario@gmail.com",
+  "password": "usuario"
+}
+
+Após autenticação bem-sucedida, o usuário será redirecionado para o Dashboard.
+
+## 5.2 Dashboard
+
+O Dashboard exibe uma tabela com os pagamentos cadastrados.
+
+Funcionalidades disponíveis:
+Adicionar Pagamento: Cria um novo pagamento.
+Editar Pagamento: Atualiza os dados de um pagamento específico.
+Deletar Pagamento: Deleta um pagamento da tabela.
+Pesquisar Pagamento: Permite buscar pelo título do pagamento.
+Paginação: Possibilita a navegação por páginas.
