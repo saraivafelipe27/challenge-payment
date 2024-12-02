@@ -1,6 +1,6 @@
-# ChallengeFrontPayment
+# ChallengeFrontPayment :octocat:
 
-# Documentação do Projeto: Sistema de Gerenciamento de pagamentos
+# Documentação do Projeto: Sistema de Gerenciamento de pagamentos :moneybag:
 
 ## 1. Introdução
 Este projeto é um sistema básico de gerenciamento de pagamentos desenvolvido com Angular TypeScript. Ele permite:
@@ -60,10 +60,9 @@ http://localhost:3030
 ## 5.1 Login
 O usuário pode fazer login utilizando o seguinte usuário padrão:
 
-{
-  "email": "usuario@gmail.com",
-  "password": "usuario"
-}
+"email": "usuario@gmail.com",
+
+"password": "usuario"
 
 Após autenticação bem-sucedida, o usuário será redirecionado para o Dashboard.
 
@@ -72,8 +71,15 @@ Após autenticação bem-sucedida, o usuário será redirecionado para o Dashboa
 O Dashboard exibe uma tabela com os pagamentos cadastrados.
 
 Funcionalidades disponíveis:
+
 Adicionar Pagamento: Cria um novo pagamento.
+
 Editar Pagamento: Atualiza os dados de um pagamento específico.
+
 Deletar Pagamento: Deleta um pagamento da tabela.
+
 Pesquisar Pagamento: Permite buscar pelo título do pagamento.
+
+Organiza pagamento: Permite a organização por data ASC/DESC.
+
 Paginação: Possibilita a navegação por páginas.
