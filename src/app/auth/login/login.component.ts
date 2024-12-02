@@ -11,14 +11,22 @@ import { ApiService } from '../../services/api.service'
 export class LoginComponent {
   email: string = '';
   password: string = '';
+  showPassword: boolean = false;
   errorMessage: string = '';
 
-  constructor(private ApiService: ApiService) {}
+  constructor(private ApiService: ApiService, private router: Router) {}
+
+  togglePasswordVisibility(): void {
+    this.showPassword = !this.showPassword;
+  }
 
   onLogin(): void {
     this.ApiService.login(this.email, this.password).subscribe(
       response => {
-        if (response.length > 0) {
+        console.log(response)
+        const user = response.find((item: any) => item.email === this.email && item.password === this.password);
+        if (user) {
+          this.router.navigate(['/dashboard']);
           console.log('Login bem-sucedido:', response[0]);
         } else {
           this.errorMessage = 'Email ou senha incorretos!';

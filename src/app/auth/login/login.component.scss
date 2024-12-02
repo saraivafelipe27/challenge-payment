@@ -1,9 +1,21 @@
-.login {
+.login{
+    background: linear-gradient(to right, #77dd77, #238662);
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    margin: auto;
+}
+
+.card-login {
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    margin: auto;
+    width: 300px;
+    height: 300px;
+    border-radius: 20px;
+    // height: 100vh;
     background-color: #f4f4f9;
 
     h2{
@@ -33,4 +45,19 @@
             opacity: 0.8;
         }
     }
+    .toggle-password-btn {
+        margin-top: 0px;
+        width: 20px;
+        height: 20px;
+        border: none;
+        background: none;
+        cursor: pointer;
+        color: #207923;
+        font-size: 14px;
+      }
+      
+      .toggle-password-btn:hover {
+        color: #0056b3;
+      }
 }
+

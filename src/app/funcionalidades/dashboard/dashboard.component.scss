@@ -1,0 +1,42 @@
+.dashboard{
+    background: linear-gradient(to right, #77dd77, #238662);
+    align-items: center;
+    display: flex;
+    height: 100vh;
+    margin: auto;
+}
+.dashboard-card{
+    align-items: center;
+    margin: auto;
+    width: 90%;
+    height: 90vh;
+    padding: 30px;
+    border-radius: 10px;
+    background-color: aliceblue;
+}
+
+.botoes{
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+    button{
+        margin-top: 10px;
+        width: 130px; 
+        padding: 3px;
+        color: aliceblue;
+        min-height: 35px;
+        border-radius: 5px;
+        border: none ;
+        background-color: #238662;
+        &:hover{
+            opacity: 0.8;
+        }
+    }
+}
+
+.table-pagamentos{
+    height: auto;
+    margin: auto;
+    margin-top: 20px;
+}
+

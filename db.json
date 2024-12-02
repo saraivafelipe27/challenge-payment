@@ -1,20 +1,71 @@
 {
-    "tasks": [
-      {
-        "id": 1,
-        "name": "Anthea Pundy",
-        "username": "apundy4",
-        "title": "Software Engineer III",
-        "value": 177.19,
-        "date": "2021-01-01T14:09:51Z",
-        "image": "https://robohash.org/quiaautomnis.png?size=150x150&set=set1",
-        "isPayed": true
-      }
-    ],
-    "account": [
-      {
-        "email": "usuario@gmail.com",
-        "password": "usuario"
-      }
-    ]
-  }
+  "tasks": [
+    {
+      "id": "31f5",
+      "name": "",
+      "username": "teste felipe ",
+      "title": "felipe ",
+      "value": 10000,
+      "date": "2024-12-31",
+      "image": "https://robohash.org/0.8456919244803709?size=150x150&set=set1",
+      "isPayed": false
+    },
+    {
+      "id": "103f",
+      "name": "",
+      "username": "",
+      "title": "",
+      "value": 0,
+      "date": "2024-12-09",
+      "image": "https://robohash.org/0.7251513042475897?size=150x150&set=set1",
+      "isPayed": false
+    },
+    {
+      "id": "a0c6",
+      "name": "",
+      "username": "",
+      "title": "",
+      "value": 0,
+      "date": "2024-12-18",
+      "image": "https://robohash.org/0.9078319802532004?size=150x150&set=set1",
+      "isPayed": false
+    },
+    {
+      "id": "92bf",
+      "name": "",
+      "username": "",
+      "title": "",
+      "value": 0,
+      "date": "2024-12-02",
+      "image": "https://robohash.org/0.7658841115571338?size=150x150&set=set1",
+      "isPayed": false
+    },
+    {
+      "id": "856c",
+      "name": "",
+      "username": "",
+      "title": "",
+      "value": 0,
+      "date": "2024-12-25",
+      "image": "https://robohash.org/0.398144041005285?size=150x150&set=set1",
+      "isPayed": false
+    },
+    {
+      "id": "c660",
+      "name": "",
+      "username": "",
+      "title": "",
+      "value": 0,
+      "date": "2025-01-01",
+      "image": "https://robohash.org/0.5844401365060405?size=150x150&set=set1",
+      "isPayed": false
+    }
+  ],
+  "account": [
+    {
+      "email": "usuario@gmail.com",
+      "password": "usuario",
+      "id": "a258"
+    }
+  ]
+}

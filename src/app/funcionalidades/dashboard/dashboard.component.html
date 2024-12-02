@@ -1,0 +1,29 @@
+
+
+<div class="dashboard">
+    <div class="dashboard-card">
+        <div class="botoes" >
+            <!-- alterar logica do botão para consulta com filtro -->
+            <button (click)="openActionBarForCreate()">Pesquisar</button>
+            <button (click)="openActionBarForCreate()">Criar Novo Pagamento</button>
+        </div>
+
+        <div class="table-pagamentos">
+            <app-tabela-pagamentos
+            [tasks]="tasks"
+            (edit)="openActionBarForEdit($event)"
+            (delete)="onDelete($event)"
+            ></app-tabela-pagamentos>
+        </div>
+
+        <div class="action-bar">
+            <app-action-bar-criar-editar-pagamentos
+            [showActionBar]="showActionBar"
+            [isEditMode]="isEditMode"
+            [selectedTask]="selectedTask"
+            (saveChanges)="saveChanges()"
+            (closeActionBar)="closeActionBar()">
+            </app-action-bar-criar-editar-pagamentos>
+        </div>
+    </div>
+</div>
