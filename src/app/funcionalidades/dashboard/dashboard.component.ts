@@ -1,17 +1,15 @@
 import { Component, OnInit } from '@angular/core';
-import { HttpClient } from '@angular/common/http';
-import { ApiService } from '../../services/api.service'
-
+import { ApiService } from '../../services/api.service';
 
 @Component({
   selector: 'app-dashboard',
   templateUrl: './dashboard.component.html',
   styleUrls: ['./dashboard.component.scss']
 })
-
-
-export class DashboardComponent implements OnInit{
+export class DashboardComponent implements OnInit {
   tasks: any[] = [];
+  tasksFiltradas: any[] = [];  // Tarefa filtrada
+  search: string = ''; 
   selectedTask: any = null;
   showActionBar: boolean = false;
   isEditMode = false;
@@ -25,7 +23,19 @@ export class DashboardComponent implements OnInit{
   loadTasks() {
     this.apiService.loadTasks().subscribe((data: any) => {
       this.tasks = data;
+      this.tasksFiltradas = data;  
     });
+  }
+
+  onSearch() {
+    if (this.search) {
+      this.tasksFiltradas = this.tasks.filter(task =>
+        task.name.toLowerCase().includes(this.search.toLowerCase()) || 
+        task.title.toLowerCase().includes(this.search.toLowerCase())
+      );
+    } else {
+      this.tasksFiltradas = this.tasks; 
+    }
   }
 
   onEdit(task: any) {
@@ -57,6 +67,7 @@ export class DashboardComponent implements OnInit{
     this.apiService.deleteTask(id).subscribe({
       next: () => {
         this.tasks = this.tasks.filter((task) => task.id !== id);
+        this.onSearch(); 
       },
       error: (err) => {
         console.error('Erro ao deletar a tarefa:', err);
@@ -71,11 +82,13 @@ export class DashboardComponent implements OnInit{
           task.id === this.selectedTask.id ? this.selectedTask : task
         );
         this.closeActionBar();
+        this.onSearch();  
       });
     } else {
       this.apiService.createTask(this.selectedTask).subscribe((newTask: any) => {
         this.tasks.push(newTask);
         this.closeActionBar();
+        this.onSearch(); 
       });
     }
   }

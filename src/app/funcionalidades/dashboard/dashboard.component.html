@@ -1,19 +1,16 @@
-
-
 <div class="dashboard">
     <div class="dashboard-card">
-        <div class="botoes" >
-            <!-- alterar logica do botão para consulta com filtro -->
-            <button (click)="openActionBarForCreate()">Pesquisar</button>
+        <div class="botoes">
+            <input type="text" placeholder="Pesquisar..." [(ngModel)]="search" (input)="onSearch()">
             <button (click)="openActionBarForCreate()">Criar Novo Pagamento</button>
         </div>
 
         <div class="table-pagamentos">
             <app-tabela-pagamentos
-            [tasks]="tasks"
+            [tasks]="tasksFiltradas"
             (edit)="openActionBarForEdit($event)"
-            (delete)="onDelete($event)"
-            ></app-tabela-pagamentos>
+            (delete)="onDelete($event)">
+            </app-tabela-pagamentos>
         </div>
 
         <div class="action-bar">
