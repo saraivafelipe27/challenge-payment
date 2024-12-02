@@ -1,0 +1,53 @@
+
+.action-bar {
+    position: fixed;
+    top: 0;
+    right: 0;
+    width: 300px;
+    height: 100%;
+    background-color: #ffffff;
+    box-shadow: -2px 0 5px rgba(0, 0, 0, 0.1);
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    overflow-y: auto;
+  }
+  
+
+  
+  .action-bar form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .action-bar label {
+    font-size: larger;
+  }
+  
+  .action-bar input {
+    width: 100%;
+    padding: 5px;
+    margin-top: 5px;
+    margin: 10px 0px;
+    border-radius: 7px;
+    border: 2px solid  gray  ;
+  }
+  
+  .action-bar .actions {
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+  }
+  
+  .action-bar button {
+    height: 35px;
+    background-color: #238662;    
+    margin: 10px 0px;
+    border-radius: 7px;
+    border: 2px solid  #238662 ;
+    padding: 4px;
+    color: aliceblue;
+    &:hover{
+      opacity: 0.5;
+  }
+}
